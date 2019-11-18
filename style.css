@@ -4,20 +4,27 @@
 
 #photo-album {
     display: grid;
-    grid-template-columns: repeat(5,1fr);
-    grid-template-rows: repeat(7, 1fr);
+    grid-template-columns: minmax(auto-fit, 300px) minmax(200px, 1fr) 150px;
+    /* repeat(auto-fit, minmax(240px, 1fr)); */
+    grid-template-rows: 15% 10% 17.5% 17.5% 17.5% 17.5% 5%;
+    grid-gap: 1rem;
+    grid-auto-flow: dense;
+    background: chocolate;
     /* grid-template-columns: 0.7fr repeat(2,1fr) 0.7fr;
     grid-template-rows: 0.7fr repeat(2,1fr) 0.5fr; */
     height: 100vh;
-    /* width: 100%; */
-    /* grid-gap: 1rem; */
+    width: 100%;
+    font-size: 100px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
     grid-template-areas: 
         "hd01 hd01 hd01 hd01 hd01"
+        "nv01 nv01 nv01 nv01 nv01"
         "pc01 pc02 pc03 pc04 pc05"
         "pc06 pc07 pc08 pc09 pc10"
         "pc11 pc12 pc13 pc14 pc15"
         "pc16 pc17 pc18 pc19 pc20"
-        "nv01 nv01 nv01 nv01 nv01"
         "ft01 ft01 ft01 ft01 ft01"
     ;
 }
@@ -29,8 +36,13 @@ img {
 }
 #header {
     grid-area: hd01;
-    background: hotpink;
+    background: linear-gradient(to bottom, #33ccff 0%, #cc6600 100%);
+    font-size: 100px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-top: 19px;
 }
+
 #footer {
     grid-area: ft01;
     background: lightseagreen;
@@ -42,7 +54,7 @@ img {
 }
 
 #image-2{
-    background:hotpink;
+    
     grid-area: pc02;
 }
 #image-3{
@@ -123,5 +135,100 @@ img {
 
 #nav {
     grid-area: nv01;
-    background: indigo;
+    background: linear-gradient(to top, #33ccff -35%, #cc6600 100%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-decoration: underline;
+}
+img:hover {
+    opacity: 0.5;
+}
+
+#home:hover {
+    color:turquoise
+}
+#about:hover {
+    color:turquoise
+}
+#contact:hover {
+    color:turquoise
+}
+
+
+
+
+@media (min-width : 501px) and (max-width:800px) {
+    
+    #photo-album {
+        display: grid;
+        grid-template-columns: minmax(auto-fit, 300px) minmax(200px, 1fr) 150px;
+        grid-template-rows: 10% 10% 17.5% 17.5% 17.5% 17.5% 17.5% 10%;
+        grid-gap: 1rem;
+        grid-auto-flow: dense;
+        /* grid-template-columns: 0.7fr repeat(2,1fr) 0.7fr;
+        grid-template-rows: 0.7fr repeat(2,1fr) 0.5fr; */
+        height: 100vh;
+        width: 100%;
+        border: black solid;
+        font-size: 18px;;
+        
+        grid-template-areas: 
+            "hd01 hd01 hd01 hd01"
+            "nv01 nv01 nv01 nv01"
+            "pc01 pc02 pc03 pc04"
+            "pc05 pc06 pc07 pc08"
+            "pc09 pc10 pc11 pc12"
+            "pc13 pc14 pc15 pc16"
+            "pc17 pc18 pc19 pc20"
+            "ft01 ft01 ft01 ft01"
+        ;
+    }
+    #header {
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+}
+
+@media (max-width : 500px) {
+    #photo-album {
+        display: grid;
+        grid-template-columns: minmax(auto-fit, 180px) minmax(180px, 1fr);
+        
+        grid-template-rows: 5% 5% 8.5% 8.5% 8.5% 8.5% 8.5% 8.5% 8.5% 8.5% 8.5% 8.5% 5%;
+        grid-gap: 1rem;
+        grid-auto-flow: dense;
+        /* grid-template-columns: 0.7fr repeat(2,1fr) 0.7fr;
+        grid-template-rows: 0.7fr repeat(2,1fr) 0.5fr; */
+        height: 100vh;
+        width: 100%;
+        
+        grid-template-areas: 
+            "hd01 hd01"
+            "nv01 nv01"
+            "pc01 pc02"
+            "pc03 pc04"
+            "pc05 pc06"
+            "pc07 pc08"
+            "pc09 pc10"
+            "pc11 pc12"
+            "pc13 pc14"
+            "pc15 pc16"
+            "pc17 pc18"
+            "pc19 pc20"
+            "ft01 ft01"
+        ;
+    }
+    #header {
+        font-size: 18px;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border: black solid 2px;
+        }
 }
