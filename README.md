@@ -6,7 +6,7 @@
 * I had a hard time making my photo album responsive. The pictures were getting smaller but they were not changing their locations.
 * I also had hard time figuring out the layout of my album. I was not sure where to put each section. 
 * I struggled with what to write on this readme file but here we are :) 
-* I overcame my challenges by spending more time on the project and try different things to make it work.
+* I overcame my challenges by spending more time on the project and trying different things to make it work.
   
 ## `Goals`
 * My first goal on this project was to show people how amazing the cats are!

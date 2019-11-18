@@ -8,6 +8,7 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(7, 1fr);
+    /* grid-template-columns: repeat(5, minmax(250px, 1fr) ); */
     /* grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
     /* grid-template-columns: minmax(auto-fit, 300px) minmax(200px, 1fr) 150px; */
     /* repeat(auto-fit, minmax(240px, 1fr)); */
