@@ -14,7 +14,7 @@
 
 ## `Code`
 * I mainly used CSS in this project. 
-* The code used for grid areas :
+* The code I used for grid areas :
 
 ``` 
 grid-template-areas: 
@@ -28,6 +28,7 @@ grid-template-areas:
     ;
 
 ```
+* Laypout tools used:
 
 
 
