@@ -28,7 +28,21 @@ grid-template-areas:
     ;
 
 ```
-* Laypout tools used:
+* Layout codes used:
+```@media (min-width : 501px) and (max-width:800px) {
+    
+    #photo-album {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-auto-rows: repeat(8,1fr);
+        grid-auto-flow: dense;
+        height: 100vh;
+        width: 100%;
+        border: black solid;
+        font-size: 18px;
+```
+
+
 
 
 
