@@ -249,8 +249,8 @@ img:hover {
 @media (max-width : 500px) {
     #photo-album {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(14, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(23, 1fr);
         /* grid-template-rows: 5% 5% 8.5% 8.5% 8.5% 8.5% 8.5% 8.5% 8.5% 8.5% 8.5% 8.5% 5%; */
         grid-gap: 1rem;
         grid-auto-flow: dense;
@@ -259,7 +259,7 @@ img:hover {
         height: 100vh;
         width: 100%;
         
-        grid-template-areas: 
+        /* grid-template-areas: 
             "hd01 hd01"
             "nv01 nv01"
             "pc01 pc02"
@@ -273,6 +273,31 @@ img:hover {
             "pc17 pc18"
             "pc19 pc20"
             "ft01 ft01"
+        ; */
+        grid-template-areas: 
+            "hd01"
+            "nv01"
+            "pc01"
+            "pc02"
+            "pc03"
+            "pc05" 
+            "pc07"
+            "pc09"
+            "pc11" 
+            "pc13"
+            "pc15" 
+            "pc17" 
+            "pc19"
+            "pc20"
+            "pc04"
+            "pc06"
+            "pc08"
+            "pc10"
+            "pc12"
+            "pc14"
+            "pc16"
+            "pc18"
+            "ft01"
         ;
     }
     #header {
