@@ -5,7 +5,8 @@
 
 #photo-album {
     display: grid;
-    grid-template-columns: minmax(auto-fit, 300px) minmax(200px, 1fr) 150px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* grid-template-columns: minmax(auto-fit, 300px) minmax(200px, 1fr) 150px; */
     /* repeat(auto-fit, minmax(240px, 1fr)); */
     grid-template-rows: 15% 10% 17.5% 17.5% 17.5% 17.5% 5%;
     grid-gap: 1rem;
@@ -50,7 +51,7 @@ img {
 }
 
 #image-1{
-    background: lightskyblue;
+    
     grid-area: pc01;
 }
 
@@ -59,83 +60,84 @@ img {
     grid-area: pc02;
 }
 #image-3{
-    background: lightskyblue;
+    
     grid-area: pc03;
 }
 #image-4{
-    background: lightskyblue;
+    
     grid-area: pc04;
 }
 #image-5{
-    background: lightskyblue;
+    
     grid-area: pc05;
 }
 #image-6{
-    background: lightskyblue;
+    
     grid-area: pc06;
 }
 
 #image-7{
-    background: lightskyblue;
+    
     grid-area: pc07;
 }
 
 #image-8{
-    background: lightskyblue;
+    
     grid-area: pc08;
 }
 
 #image-9 {
-    background: lightskyblue;
+    
     grid-area: pc09;
 }
 #image-10{
-    background: lightskyblue;
+    
     grid-area: pc10;
 }
 #image-11{
-    background: lightskyblue;
+    
     grid-area: pc11;
 }
 #image-12{
-    background: lightskyblue;
+    
     grid-area: pc12;
 }
 #image-13{
-    background: lightskyblue;
+    
     grid-area: pc13;
 }
 #image-14{
-    background: lightskyblue;
+    
     grid-area: pc14;
 }
 #image-15{
-    background: lightskyblue;
+    
     grid-area: pc15;
 }
 #image-16{
-    background: lightskyblue;
+    
     grid-area: pc16;
 }
 #image-17{
-    background: lightskyblue;
+    
     grid-area: pc17;
 }
 #image-18{
-    background: lightskyblue;
+    
     grid-area: pc18;
 }
 #image-19{
-    background: lightskyblue;
+    
     grid-area: pc19;
 }
 #image-20{
-    background: lightskyblue;
+    
     grid-area: pc20;
 }
 
 #nav {
     grid-area: nv01;
+    /* background: chocolate; */
     background: linear-gradient(to top, #33ccff -35%, #cc6600 100%);
     display: flex;
     flex-direction: row;
@@ -146,8 +148,19 @@ img:hover {
     opacity: 0.5;
 }
 
+#home {
+    background: linear-gradient(to top, #33ccff -35%, #cc6600 100%);
+}
+#about {
+    background: linear-gradient(to top, #33ccff -35%, #cc6600 100%);
+}
+
+#contact {
+    background: linear-gradient(to top, #33ccff -35%, #cc6600 100%);
+}
 #home:hover {
     color:turquoise
+    
 }
 #about:hover {
     color:turquoise
@@ -163,9 +176,11 @@ img:hover {
     
     #photo-album {
         display: grid;
-        grid-template-columns: minmax(auto-fit, 300px) minmax(200px, 1fr) 150px;
-        grid-template-rows: 10% 10% 17.5% 17.5% 17.5% 17.5% 17.5% 10%;
-        grid-gap: 1rem;
+        /* grid-template-columns: minmax(auto-fit, 300px) minmax(200px, 1fr) 150px; */
+        grid-template-columns: repeat(4,1fr);
+        grid-auto-rows: repeat(8,1fr);
+        /* grid-template-rows: 10% 17.5% 17.5% 17.5% 17.5% 17.5% 10% 10%; */
+        /* grid-gap: 1rem; */
         grid-auto-flow: dense;
         /* grid-template-columns: 0.7fr repeat(2,1fr) 0.7fr;
         grid-template-rows: 0.7fr repeat(2,1fr) 0.5fr; */
@@ -174,19 +189,54 @@ img:hover {
         border: black solid;
         font-size: 18px;;
         
-        grid-template-areas: 
+        /* grid-template-areas: 
             "hd01 hd01 hd01 hd01"
-            "nv01 nv01 nv01 nv01"
             "pc01 pc02 pc03 pc04"
             "pc05 pc06 pc07 pc08"
             "pc09 pc10 pc11 pc12"
             "pc13 pc14 pc15 pc16"
             "pc17 pc18 pc19 pc20"
+            "nv01 nv01 nv01 nv01"
+            "ft01 ft01 ft01 ft01"
+        ; */
+        grid-template-areas: 
+            "hd01 hd01 hd01 hd01"
+            "nv01 pc02 pc03 pc04"
+            "nv01 pc06 pc07 pc08"
+            "nv01 pc10 pc11 pc12"
+            "nv01 pc14 pc15 pc16"
+            "pc17 pc18 pc19 pc20"
+            "pc05 pc01 pc13 pc09"
             "ft01 ft01 ft01 ft01"
         ;
     }
+    #nav {
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        font-size: 25px;
+        padding-top: 0px;
+        
+    }
+    
+    #home {
+        background: linear-gradient(to top, #33ccff -35%, #cc6600 100%);
+    }
+
+
+    #home:hover {
+        color:turquoise
+        
+    }
+    #about:hover {
+        color:turquoise
+    }
+    #contact:hover {
+        color:turquoise
+    }
+    
     #header {
-    font-size: 18px;
+    font-size: 35px;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
@@ -195,9 +245,9 @@ img:hover {
 @media (max-width : 500px) {
     #photo-album {
         display: grid;
-        grid-template-columns: minmax(auto-fit, 180px) minmax(180px, 1fr);
-        
-        grid-template-rows: 5% 5% 8.5% 8.5% 8.5% 8.5% 8.5% 8.5% 8.5% 8.5% 8.5% 8.5% 5%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(14, 1fr);
+        /* grid-template-rows: 5% 5% 8.5% 8.5% 8.5% 8.5% 8.5% 8.5% 8.5% 8.5% 8.5% 8.5% 5%; */
         grid-gap: 1rem;
         grid-auto-flow: dense;
         /* grid-template-columns: 0.7fr repeat(2,1fr) 0.7fr;
@@ -232,4 +282,7 @@ img:hover {
         object-fit: cover;
         border: black solid 2px;
         }
+    #nav {
+        font-size: 13px;
+    }
 }
