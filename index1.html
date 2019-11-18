@@ -1,0 +1,59 @@
+<h2 id="motivation"><code>Motivation</code></h2>
+
+<ul>
+<li>Cats are human's best friend! Even though they don't show it as much, they love us! Cats make the world a better place! 2 years ago, I adopted a small kitty and my life have changed. Now she is huge(I mean-huge!) and the queen of our life. Since then, I am leaving parties and any social event early to go home and see my little potato. I cannot describe how much I love her so I decided to make a photo album of cats. I included my fat baby too in the pictures. I think everyone should see these pictures and smile at least once while looking at them!</li>
+</ul>
+
+<h2 id="challenges"><code>Challenges</code></h2>
+
+<ul>
+<li>I had hard time making my photo album responsive. The pictures were getting smaller but they were not changing their locations.</li>
+
+<li>I also had hard time figuring out the layout of my album. I was not sure where to put each section. </li>
+
+<li>I struggled with what to write on this readme file but here we are :) </li>
+
+<li>I overcame my challenges by spending more time on the project and try different things to make it work.</li>
+</ul>
+
+<h2 id="goals"><code>Goals</code></h2>
+
+<ul>
+<li>My first goal on this project was to show people how amazing the cats are!</li>
+
+<li>My second goal is to practice responsive grid and css tools.I tried to have 3 different layouts and that helped me to understand the grids better.</li>
+</ul>
+
+<h2 id="code"><code>Code</code></h2>
+
+<ul>
+<li>I mainly used CSS in this project. </li>
+
+<li>The code I used for grid areas :</li>
+</ul>
+
+<pre><code class="  language- ">grid-template-areas: 
+        "hd01 hd01 hd01 hd01 hd01"
+        "nv01 nv01 nv01 nv01 nv01"
+        "pc01 pc02 pc03 pc04 pc05"
+        "pc06 pc07 pc08 pc09 pc10"
+        "pc11 pc12 pc13 pc14 pc15"
+        "pc16 pc17 pc18 pc19 pc20"
+        "ft01 ft01 ft01 ft01 ft01"
+    ;
+</code></pre>
+
+<ul>
+<li>Layout codes used:</li>
+</ul>
+
+<pre><code class="@media (min-width : 501px) and (max-width:800px) { language-@media (min-width : 501px) and (max-width:800px) {">    #photo-album {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-auto-rows: repeat(8,1fr);
+        grid-auto-flow: dense;
+        height: 100vh;
+        width: 100%;
+        border: black solid;
+        font-size: 18px;
+</code></pre>
